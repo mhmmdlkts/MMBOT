@@ -1,0 +1,22 @@
+{
+  "name": "mmbot",
+  "version": "0.0.1",
+  "description": "",
+  "main": "bot.js",
+  "scripts": {
+    "test": "node bot.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mhmmdlkts/MMBOT.git"
+  },
+  "author": "Mali & Kutay",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mhmmdlkts/MMBOT/issues"
+  },
+  "homepage": "https://github.com/mhmmdlkts/MMBOT#readme",
+  "dependencies": {
+    "discord.js": "^12.2.0"
+  }
+}
