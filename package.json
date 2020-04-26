@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/mhmmdlkts/MMBOT#readme",
   "dependencies": {
-    "discord.js": "^12.2.0"
+    "discord.js": "^12.2.0",
+    "node-opus": "^0.3.3"
   }
 }
