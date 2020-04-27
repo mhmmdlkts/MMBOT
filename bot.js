@@ -15,7 +15,8 @@ client.on('message', msg => {
   if (msg.content === 'ayberk') {
     msg.reply('Selam');
   }
-  if (msg.content === 'a') {
+  if (msg.content === 'Ezhel') {
+    senMesage("!p Ezhel bir sonraki hatatimda gel",true)
   }
 });
 
@@ -54,12 +55,14 @@ client.on("voiceStateUpdate", (oldMember, newMember) => {
       connection.play(getRandomHoVoice("yagiz",1));
     if(newMember.id == 305288732360179722) // Amac
       connection.play(getRandomHoVoice("amac",1));
+    if(newMember.id == 305288732360179722) // Amac
+      connection.play(getRandomHoVoice("amac",1));
 
   } else if(oldUserChannel === clientChannel && newUserChannel !== clientChannel){
 
     // User leaves a voice channel
 
-  } else if(newMember.selfMute && !oldMember.selfMute){
+  } else if(newMember.selfMute && !oldMember.selfMute && newUserChannel === clientChannel){
 
     connection.play("./voice/mic_off.mp3");
     // User unmute his self
@@ -111,3 +114,12 @@ function getRandomHoVoice(name, count) {
 function randGen(max) {
   return Math.floor((Math.random() * max) + 1);
 }
+
+function senMesage(msg,hiden) {
+  console.log(client.channels);
+  if(hiden)
+    client.channels.cache.get('703450090643259412').send(msg);
+  else
+    client.channels.cache.get('551446105121095685').send(msg);
+}
+
